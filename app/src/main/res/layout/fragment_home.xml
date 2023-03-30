@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_bg" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_play_button"
+        android:text="Play Game"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+</FrameLayout>

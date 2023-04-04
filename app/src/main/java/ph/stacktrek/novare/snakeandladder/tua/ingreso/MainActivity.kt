@@ -2,6 +2,7 @@ package ph.stacktrek.novare.snakeandladder.tua.ingreso
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
+
+
 
     }
 }

@@ -12,6 +12,18 @@
         android:theme="@style/Theme.SnakeAndLadder"
         tools:targetApi="31">
         <activity
+            android:name=".GameBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DialoguePlayersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayerTwoUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -20,9 +20,4 @@
         android:name="ph.stacktrek.novare.snakeandladder.tua.ingreso.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
-    <fragment
-        android:id="@+id/userProfileFragment"
-        android:name="ph.stacktrek.novare.snakeandladder.tua.ingreso.UserProfileFragment"
-        android:label="fragment_user_profile"
-        tools:layout="@layout/fragment_user_profile" />
 </navigation>

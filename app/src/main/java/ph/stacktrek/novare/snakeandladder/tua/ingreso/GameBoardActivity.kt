@@ -1,10 +1,12 @@
 package ph.stacktrek.novare.snakeandladder.tua.ingreso
 
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlin.random.Random
@@ -75,6 +77,15 @@ class GameBoardActivity : AppCompatActivity() {
                 initBoard()
 
                 if (newPosition == 100) {
+                    val alertDialogBuilder = AlertDialog.Builder(this)
+                    alertDialogBuilder.setTitle("Congratulations")
+                    alertDialogBuilder.setMessage("${playerNames[currentPlayer]} wins!")
+                    alertDialogBuilder.setPositiveButton("OK",
+                        DialogInterface.OnClickListener { dialog, which -> finish() })
+
+                    val alertDialog = alertDialogBuilder.create()
+                    alertDialog.show()
+
                     playerPositionTextView.text = "${playerNames[currentPlayer]} wins!"
                     rollDiceButton.isEnabled = false
 
@@ -153,9 +164,9 @@ class GameBoardActivity : AppCompatActivity() {
                         }
                         button.setBackgroundColor(playerColor)
                     }
-                    snakes.containsKey(position) -> button.setBackgroundColor(Color.parseColor("#FFC107")) // Color for snakes
-                    ladders.containsKey(position) -> button.setBackgroundColor(Color.parseColor("#4CAF50")) // Color for ladders
-                    else -> button.setBackgroundColor(Color.WHITE)
+                    snakes.containsKey(position) -> button.setBackgroundColor(Color.parseColor("#F6D24B")) // Color for snakes
+                    ladders.containsKey(position) -> button.setBackgroundColor(Color.parseColor("#FF5BA5")) // Color for ladders
+                    else -> button.setBackgroundColor(Color.parseColor("#B1CCE4"))
                 }
 
                 // Add the button to the TableRow
